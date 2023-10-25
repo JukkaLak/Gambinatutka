@@ -5,6 +5,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Homepage from './components/Homepage';
 import Map from './components/Map';
 import Kokous from './components/Kokous';
+import React from 'react';
+import Ionicons from '@expo/vector-icons/Ionicons';
+
 
 
 const Tab = createBottomTabNavigator();
