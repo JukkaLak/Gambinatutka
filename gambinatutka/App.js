@@ -17,8 +17,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name='Homepage' component={Homepage} />
-        <Tab.Screen name='Map' component={Map} />
+        <Tab.Screen name='Etusivu' component={Homepage} />
+        <Tab.Screen name='Katso Gambinan saatavuus' component={Map} />
         <Tab.Screen name='Kokous' component={Kokous} />
       </Tab.Navigator>
     </NavigationContainer>
