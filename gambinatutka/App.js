@@ -6,8 +6,9 @@ import Homepage from './components/Homepage';
 import Map from './components/Map';
 import Kokous from './components/Kokous';
 import React from 'react';
-import Ionicons from '@expo/vector-icons/Ionicons';
-
+import { MaterialIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 
 
@@ -17,12 +18,36 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name='Etusivu' component={Homepage} />
-        <Tab.Screen name='Katso Gambinan saatavuus' component={Map} />
-        <Tab.Screen name='Kokous' component={Kokous} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
+       <Tab.Screen
+        name='Etusivu'
+        component={Homepage}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="home" size={24} color="black" /> 
+          ),
+        }}
+       /> 
+        <Tab.Screen
+         name='Katso Gambinan saatavuus'
+         component={Map}
+         options={{
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="map-marker" size={24} color="black" />
+          ),
+        }}
+        />
+        <Tab.Screen 
+         name='Kokous'
+         component={Kokous}
+         options={{
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="meeting-room" size={24} color="black" />
+          ),
+         }} />
+        </Tab.Navigator>
+        </NavigationContainer>
+  );  
+  
 }
 
 const styles = StyleSheet.create({
